@@ -1,0 +1,9 @@
+{
+  "name": "postcss-typescript-css",
+  "version": "0.0.0",
+  "description": "PostCSS plugin to create a typescript file by each CSS file",
+  "main": "src/index.ts",
+  "repository": "git@github.com:ezavile/postcss-typescript-css.git",
+  "author": "ezavile <ezavile@gmail.com>",
+  "license": "MIT"
+}
