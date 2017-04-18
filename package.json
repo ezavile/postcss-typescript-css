@@ -5,5 +5,23 @@
   "main": "src/index.ts",
   "repository": "git@github.com:ezavile/postcss-typescript-css.git",
   "author": "ezavile <ezavile@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack",
+    "tslint": "tslint",
+    "lint": "npm run tslint \"src/**/*.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.12",
+    "babili-webpack-plugin": "^0.0.11",
+    "clean-webpack-plugin": "^0.1.16",
+    "ts-loader": "^2.0.3",
+    "tslint": "^5.1.0",
+    "tslint-loader": "^3.5.2",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.3"
+  },
+  "dependencies": {
+    "postcss": "^5.2.17"
+  }
 }
