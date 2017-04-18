@@ -36,6 +36,7 @@
     "no-conditional-assignment": true,
     "no-console": [
       true,
+      "log",
       "debug",
       "info",
       "time",
@@ -53,7 +54,6 @@
     "no-switch-case-fall-through": true,
     "no-unused-expression": true,
     "no-unused-variable": false,
-    "no-use-before-declare": true,
     "no-var-keyword": true,
     "radix": true,
     "switch-default": true,
@@ -82,7 +82,6 @@
       "check-space"
     ],
     "jsdoc-format": true,
-    "no-constructor-vars": false,
     "one-line": [
       true,
       "check-open-brace",
