@@ -1,14 +1,16 @@
 {
   "name": "postcss-typescript-css",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "PostCSS plugin to create a typescript file by each CSS file",
   "main": "dist/postcss-typescript-css",
   "scripts": {
+    "commit": "git-cz",
     "clean": "rimraf dist",
     "compile": "npm run clean && tsc",
     "compile:watch": "tsc --watch",
     "lint": "npm run tslint \"src/**/*.ts\"",
-    "tslint": "tslint --project tsconfig.json"
+    "tslint": "tslint --project tsconfig.json",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": "git@github.com:ezavile/postcss-typescript-css.git",
   "author": "Edgar Zavala <ezavile@gmail.com>",
@@ -26,10 +28,21 @@
   "devDependencies": {
     "@types/core-js": "^0.9.41",
     "@types/node": "^7.0.12",
+    "commitizen": "^2.9.6",
     "core-js": "^2.4.1",
+    "cz-conventional-changelog": "^2.0.0",
     "rimraf": "^2.6.1",
+    "semantic-release": "^6.3.2",
     "tslint": "^5.1.0",
     "typescript": "^2.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "global": "^4.3.2",
+    "semantic-release-cli": "^3.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
 }
