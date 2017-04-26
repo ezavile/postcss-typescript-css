@@ -12,3 +12,10 @@ node_modules/
 
 dist/
 .vscode/
+
+# Coverage directory used by tools like istanbul
+coverage
+.nyc_output
+coverage.*
+
+.env
