@@ -8,7 +8,8 @@ const saveFile = (file: PostcssTypescriptCss.Options) => {
   return new Promise((resolve, reject) => {
     try {
       const dirname = path.dirname(file.cssFileName);
-      const filename = path.basename(file.cssFileName, '.postcss');
+      const extension = path.extname(file.cssFileName);
+      const filename = path.basename(file.cssFileName, extension);
       writeFileSync(`${dirname}/${filename}.ts`, build(file));
       resolve(true);
     } catch (err) {

@@ -11,13 +11,13 @@ function run(t: TestContext, input: {css: string, from: string}, opts?: PostcssT
   .then((result) => {
     let fakeComponentTS;
     if (opts) {
-      fakeComponentTS = readFileSync(path.join(__dirname, 'postcss/fakeComponentModules.ts'), 'utf8');
+      fakeComponentTS = readFileSync(path.join(__dirname, 'styles/fakeComponentModules.ts'), 'utf8');
       t.true(fakeComponentTS.includes('fakeComponentModulesStyle'));
       t.true(fakeComponentTS.includes('fakeComponentModules:'));
       t.true(fakeComponentTS.includes('fakeComponentModulesDescendentName:'));
       t.true(fakeComponentTS.includes('fakeComponentModulesModifierName:'));
     } else {
-      fakeComponentTS = readFileSync(path.join(__dirname, 'postcss/fakeComponent.ts'), 'utf8');
+      fakeComponentTS = readFileSync(path.join(__dirname, 'styles/fakeComponent.ts'), 'utf8');
       t.true(fakeComponentTS.includes('fakeComponentStyle'));
       t.true(fakeComponentTS.includes('fakeComponent:'));
       t.true(fakeComponentTS.includes('fakeComponentDescendentName:'));
@@ -39,14 +39,14 @@ function run(t: TestContext, input: {css: string, from: string}, opts?: PostcssT
 }
 
 test('should create a ts file', t => {
-  const cssFile = path.join(__dirname, 'postcss/fakeComponent.postcss');
+  const cssFile = path.join(__dirname, 'styles/fakeComponent.css');
   const cssContent = readFileSync(cssFile, 'utf8');
   return run(t, { css: cssContent, from: cssFile });
 });
 
 test('should create a ts file with postcss-modules configuration', t => {
-  const cssFileName = path.join(__dirname, 'postcss/fakeComponentModules.postcss');
-  const content = JSON.parse(readFileSync(path.join(__dirname, 'postcss/fakeComponentModules.json'), 'utf8'));
+  const cssFileName = path.join(__dirname, 'styles/fakeComponentModules.css');
+  const content = JSON.parse(readFileSync(path.join(__dirname, 'styles/fakeComponentModules.json'), 'utf8'));
   return run(t, { css: '', from: '' }, { cssFileName, content });
 });
 
@@ -55,6 +55,6 @@ test('throws if cssFileName is null', t => {
 });
 
 test('throws if content is null', t => {
-  const cssFileName = path.join(__dirname, 'postcss/fakeComponentModules.postcss');
+  const cssFileName = path.join(__dirname, 'styles/fakeComponentModules.css');
   return run(t, { css: '', from: '' }, { cssFileName, content: null });
 });

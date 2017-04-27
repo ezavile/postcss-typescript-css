@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist coverage *.log",
     "commit": "git-cz",
-    "copyFakePostcssFile": "cpx \"src/spec/postcss/*\" dist/spec/postcss/",
+    "copyFakePostcssFile": "cpx \"src/spec/styles/*\" dist/spec/styles/",
     "compile": "npm run clean && tsc",
     "compile:watch": "tsc --watch",
     "lint": "npm run tslint \"src/**/*.ts\"",
