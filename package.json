@@ -5,7 +5,6 @@
   "main": "dist/postcss-typescript-css",
   "scripts": {
     "clean": "rimraf dist coverage *.log",
-    "commit": "git-cz",
     "copyFakePostcssFile": "cpx \"src/spec/styles/*\" dist/spec/styles/",
     "compile": "npm run clean && tsc",
     "compile:watch": "tsc --watch",
@@ -15,8 +14,7 @@
     "tslint": "tslint --project tsconfig.json",
     "precommit": "npm test",
     "pretest": "npm run lint && npm run clean && tsc && npm run copyFakePostcssFile",
-    "report-coverage": "codecov -f coverage/lcov.info",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "report-coverage": "codecov -f coverage/lcov.info"
   },
   "repository": "git@github.com:ezavile/postcss-typescript-css.git",
   "author": "Edgar Zavala <ezavile@gmail.com>",
@@ -64,14 +62,11 @@
     "@types/node": "7.0.12",
     "ava": "0.19.1",
     "codecov": "2.1.0",
-    "commitizen": "2.9.6",
     "core-js": "2.4.1",
     "cpx": "1.5.0",
-    "cz-conventional-changelog": "2.0.0",
     "husky": "0.13.3",
     "nyc": "10.2.0",
     "rimraf": "2.6.1",
-    "semantic-release": "6.3.2",
     "tslint": "5.1.0",
     "typescript": "2.2.2"
   },
@@ -79,10 +74,5 @@
     "camelcase": "4.1.0",
     "postcss": "5.2.17",
     "postcss-selector-parser": "2.2.3"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
   }
 }
