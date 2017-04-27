@@ -11,8 +11,11 @@ node_js:
   - '7'
 before_script:
   - npm prune
+script:
+  - npm run test
 after_success:
   - npm run semantic-release
+  - npm run report-coverage
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
