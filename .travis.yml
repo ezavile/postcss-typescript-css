@@ -1,0 +1,20 @@
+language: node_js
+cache:
+  yarn: true
+  directories:
+    - node_modules
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+node_js:
+  - '7'
+before_script:
+  - npm prune
+script:
+  - npm run test
+after_success:
+  - npm run report-coverage
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

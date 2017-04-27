@@ -1,0 +1,21 @@
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+dist/
+.vscode/
+
+# Coverage directory used by tools like istanbul
+coverage
+.nyc_output
+coverage.*
+
+.env
