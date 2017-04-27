@@ -4,7 +4,6 @@
 [![Codecov](https://img.shields.io/codecov/c/github/ezavile/postcss-typescript-css.svg?style=flat-square)](https://codecov.io/gh/ezavile/postcss-typescript-css)
 [![npm](https://img.shields.io/npm/v/postcss-typescript-css.svg?style=flat-square)](https://www.npmjs.com/package/postcss-typescript-css)
 [![MIT License](https://img.shields.io/npm/l/postcss-typescript-css.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 
 A [PostCSS] plugin to create a TypeScript file by each CSS file.
 
@@ -82,6 +81,7 @@ npm test
 Take a look a this [repo]. Here you could see the plugin in action with webpack2 and react with TypeScript and PostCSS.
 
 See [PostCSS] docs for examples for your environment.
+
 ## Thanks
 Inspired by [postcss-generate-ts-hash], [postcss-modules] and [postcss-font-pack] to create the structure of the project
 ## Contributing
