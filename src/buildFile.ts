@@ -8,9 +8,15 @@ const filename = path.basename(file.cssFileName, '.postcss');
 return (
 `export const ${filename}Style = {
   ${
-    file.content.map((c: string) => {
-      return ` ${camelCase(c)}: '${c}'\n`;
-    })
+    file.content instanceof Array ? (
+      file.content.map((c: string) => {
+        return ` ${camelCase(c)}: '${c}'\n`;
+      })
+    ) : (
+      Object.keys(file.content).map((c: string) => {
+        return ` ${camelCase(c)}: '${(<{[key: string]: string }>file.content)[c]}'\n`;
+      })
+    )
   },
 };
 `

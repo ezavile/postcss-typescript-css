@@ -1,6 +1,6 @@
 export namespace PostcssTypescriptCss {
   export interface Options {
     cssFileName: string;
-    content: string[];
+    content: { [key: string]: string } | string[];
   }
 }
