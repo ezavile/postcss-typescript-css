@@ -84,6 +84,7 @@ See [PostCSS] docs for examples for your environment.
 
 ## Thanks
 Inspired by [postcss-generate-ts-hash], [postcss-modules] and [postcss-font-pack] to create the structure of the project
+
 ## Contributing
 * ⇄ Pull requests and ★ Stars are always welcome.
 * For bugs and feature requests, please create an issue.
@@ -96,5 +97,4 @@ Inspired by [postcss-generate-ts-hash], [postcss-modules] and [postcss-font-pack
 [repo]: https://github.com/ezavile/postcss-typescript-css-example
 [postcss-font-pack]: https://github.com/jedmao/postcss-font-pack
 [postcss-generate-ts-hash]: https://github.com/mohsen1/postcss-generate-ts-hash
-[semantic-release]: https://github.com/semantic-release/semantic-release
 [MIT License]: https://github.com/ezavile/postcss-typescript-css/blob/master/LICENSE
