@@ -1,6 +1,6 @@
 {
   "name": "postcss-typescript-css",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "PostCSS plugin to create a typescript file by each CSS file",
   "main": "dist/postcss-typescript-css",
   "scripts": {
