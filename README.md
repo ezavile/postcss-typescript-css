@@ -29,7 +29,7 @@ What is this? For example, you have the following CSS file:
 And the plugin will give you a TypeScript file like this:
 
 **componentName.ts**
-```typescript
+```javascript
 export const componentNameStyle = {
    componentName: 'ComponentName',
    componentDescendentName: 'ComponentName-descendentName',
@@ -39,7 +39,7 @@ export const componentNameStyle = {
 So, you can import the TypeScript file
 
 **Note: you have to import first the componentName.css**
-```typescript
+```javascript
 import './componentName.css';
 import { componentNameStyle } from './componentName';
 
@@ -67,11 +67,15 @@ postcss([
 ]);
 ```
 ## Options
+
 ### Note: only use the options if you are using [postcss-modules]
+
 #### cssFileName
 Type: string
+
 #### content
 Type: object (JSON object)
+
 ## Testing
 This will build scripts, run tests and generate a code coverage report. Anything less than 100% coverage will throw an error.
 ```javascript
