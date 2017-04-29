@@ -10,7 +10,7 @@ const saveFile = (file: PostcssTypescriptCss.Options) => {
       const dirname = path.dirname(file.cssFileName);
       const extension = path.extname(file.cssFileName);
       const filename = path.basename(file.cssFileName, extension);
-      writeFileSync(`${dirname}/${filename}.ts`, build(file));
+      writeFileSync(`${dirname}/${filename}Style.ts`, build(file));
       resolve(true);
     } catch (err) {
       reject(err.toString());

@@ -11,13 +11,13 @@ function run(t: TestContext, input: {css: string, from: string}, opts?: PostcssT
   .then((result) => {
     let fakeComponentTS;
     if (opts) {
-      fakeComponentTS = readFileSync(path.join(__dirname, 'styles/fakeComponentModules.ts'), 'utf8');
+      fakeComponentTS = readFileSync(path.join(__dirname, 'styles/fakeComponentModulesStyle.ts'), 'utf8');
       t.true(fakeComponentTS.includes('fakeComponentModulesStyle'));
       t.true(fakeComponentTS.includes('fakeComponentModules:'));
       t.true(fakeComponentTS.includes('fakeComponentModulesDescendentName:'));
       t.true(fakeComponentTS.includes('fakeComponentModulesModifierName:'));
     } else {
-      fakeComponentTS = readFileSync(path.join(__dirname, 'styles/fakeComponent.ts'), 'utf8');
+      fakeComponentTS = readFileSync(path.join(__dirname, 'styles/fakeComponentStyle.ts'), 'utf8');
       t.true(fakeComponentTS.includes('fakeComponentStyle'));
       t.true(fakeComponentTS.includes('fakeComponent:'));
       t.true(fakeComponentTS.includes('fakeComponentDescendentName:'));
