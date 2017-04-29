@@ -26,9 +26,10 @@ What is this? For example, you have the following CSS file:
    color: red;
 }
 ```
-And the plugin will give you a TypeScript file like this:
 
-**componentName.ts**
+And the plugin will give you a TypeScript file in the same location where the CSS file is. This file generated has almost the same name, only it's added "Style" at the end of the original name of your CSS file, example:
+
+**componentNameStyle.ts**
 ```javascript
 export const componentNameStyle = {
    componentName: 'ComponentName',
@@ -41,7 +42,7 @@ So, you can import the TypeScript file
 **Note: you have to import first the componentName.css**
 ```javascript
 import './componentName.css';
-import { componentNameStyle } from './componentName';
+import { componentNameStyle } from './componentNameStyle';
 
 const element = document.createElement('div');
 element.className = componentNameStyle.componentName;
@@ -82,7 +83,7 @@ This will build scripts, run tests and generate a code coverage report. Anything
 npm test
 ```
 ## Example
-Take a look a this [repo]. Here you could see the plugin in action with webpack2 and react with TypeScript and PostCSS.
+Take a look a this [repo]. Here you could see the plugin in action with webpack 2 and React with TypeScript and PostCSS.
 
 See [PostCSS] docs for examples for your environment.
 

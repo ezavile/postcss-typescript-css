@@ -9,9 +9,9 @@ test('should create a new ts file', async (t) => {
     cssFileName,
     content: ['.FakeComponent2', '.FakeComponent2-descendentName', '.FakeComponent2--modifierName']
   }), true);
-  const tsFile = path.join(__dirname, 'styles/fakeComponent2.ts');
+  const tsFile = path.join(__dirname, 'styles/fakeComponent2Style.ts');
   const tsFileName = path.basename(tsFile, '.ts');
-  t.is(tsFileName, 'fakeComponent2');
+  t.is(tsFileName, 'fakeComponent2Style');
 });
 
 test('should create a new ts file with transformed classes', async (t) => {
