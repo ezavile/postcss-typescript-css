@@ -10,12 +10,22 @@ return (
 `export const ${filename}Style = {
   ${
     file.content instanceof Array ? (
-      file.content.map((c: string) => {
-        return ` ${camelCase(c)}: '${c}'\n`;
+      file.content.map((c: string, index: number) => {
+        const value: string = `${camelCase(c)}: '${c}'\n`;
+        if (index === 0) {
+          return `${value}`;
+        } else {
+          return ` ${value}`;
+        }
       })
     ) : (
-      Object.keys(file.content).map((c: string) => {
-        return ` ${camelCase(c)}: '${(<{[key: string]: string }>file.content)[c]}'\n`;
+      Object.keys(file.content).map((c: string, index: number) => {
+        const value: string = `${camelCase(c)}: '${(<{[key: string]: string }>file.content)[c]}'\n`;
+        if (index === 0) {
+          return `${value}`;
+        } else {
+          return ` ${value}`;
+        }
       })
     )
   },
