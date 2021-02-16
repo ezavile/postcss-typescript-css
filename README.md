@@ -1,3 +1,5 @@
+:rotating_light: **DEPRECATED** - Use [@postcss-plugins/typescript-css](https://github.com/ezavile/postcss-plugins/tree/master/packages/typescript-css) instead
+
 # postcss-typescript-css
 
 [![Travis](https://img.shields.io/travis/ezavile/postcss-typescript-css.svg?style=flat-square)](https://travis-ci.org/ezavile/postcss-typescript-css)
